@@ -1,24 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar'
+import Login from './components/login'
+import { Switch, Route } from 'react-router-dom'
+import { Header } from 'semantic-ui-react'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+        <Header size='massive'>
+          <h1>The Analyst</h1>
+          <h3>How do you rate the news....when you don't know where it is coming from?</h3>
+        </Header>
+      </div>
+      <Navbar />
+      <Switch>
+        <Route exact path='/login' component={Login} />
+      </Switch>
     </div>
   );
 }
