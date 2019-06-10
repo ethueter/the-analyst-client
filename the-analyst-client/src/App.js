@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar'
 import Login from './components/login'
+import about from './components/about'
 import { Switch, Route } from 'react-router-dom'
 import { Header } from 'semantic-ui-react'
 
@@ -17,6 +18,7 @@ function App() {
       <Navbar />
       <Switch>
         <Route exact path='/login' component={Login} />
+        <Route exact path='/about' component={about} />
       </Switch>
     </div>
   );

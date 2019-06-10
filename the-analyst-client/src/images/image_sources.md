@@ -1,0 +1,3 @@
+news blocks https://www.sartorius.co.uk/medias/press-releases-Fotolia-78396679-400x248-04.jpg?context=bWFzdGVyfHJvb3R8Mjc1MTB8aW1hZ2UvanBlZ3xoNWIvaDU3Lzg4MTU1OTUxOTIzNTAuanBnfGE3ODk2Zjc2NDhkOTI2MzliN2RjNjU2MDk2MjBiNzE1ZGI0MjM4OTc4NDA4YjJjY2FmZDNlZWU0NjY0MjNiZWM
+
+blurred press Photo by Bank Phrom on Unsplash
