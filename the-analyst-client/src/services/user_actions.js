@@ -4,7 +4,7 @@ export function login() {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(user)
+        body: JSON.stringify()
 
     }).then(res => res.json())
 }
