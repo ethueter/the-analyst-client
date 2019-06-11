@@ -1,6 +1,7 @@
 import React from 'react'
 import { Menu } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
 
 
 class Navbar extends React.Component {
@@ -69,14 +70,23 @@ class Navbar extends React.Component {
                     onClick={this.handleItemClick}>
                     About
                 </Menu.Item>
-
+                 {/* {
+                     this.props.username.length >1 ? 
                 <Menu.Item
                     as={Link}
                     to='/profile'
                     name='user'
                     position='right'>
-                    UserName
+                    {this.props.username}
+                </Menu.Item>:
+                <Menu.Item
+                    as={Link}
+                    to='/login'
+                    name='user'
+                    position='right'>
+                    Username
                 </Menu.Item>
+                 } */}
             </Menu>
         )
     }
@@ -84,4 +94,10 @@ class Navbar extends React.Component {
 
 
 }
-export default Navbar
+
+let mapStateToProps = (state) => {
+    let username = state.user.username
+    return { username: username}
+}
+
+export default connect(mapStateToProps)(Navbar)

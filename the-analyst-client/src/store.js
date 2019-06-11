@@ -1,12 +1,27 @@
 import { createStore, combineReducers } from 'redux'
+import { createForms, combineForms } from 'react-redux-form'
 import articleReducer from './reducers/article_reducer'
 import userReducer from './reducers/user_reducer'
 
+const initialSignInState = {
+    username: '',
+    password: ''
+}
 
+const initialSignUpState = {
+    username: '',
+    first_name: '',
+    last_name: '',
+    password: ''
+}
 
 const rootReducer = combineReducers({
     article: articleReducer,
-    user: userReducer
+    user: userReducer,
+    ...createForms({
+        signIn: initialSignInState,
+        signUp: initialSignUpState
+    })
 
 })
 
