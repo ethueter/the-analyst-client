@@ -6,7 +6,7 @@ import { Provider } from 'react-redux'
 import App from './App';
 import 'semantic-ui-css/semantic.min.css';
 import * as serviceWorker from './serviceWorker';
-import {BrowserRouter as Router, Route } from 'react-router-dom'
+import {BrowserRouter as Router } from 'react-router-dom'
 
 ReactDOM.render(
     <Provider store={store}>

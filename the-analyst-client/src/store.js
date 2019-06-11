@@ -1,5 +1,5 @@
 import { createStore, combineReducers } from 'redux'
-import { createForms, combineForms } from 'react-redux-form'
+import { createForms } from 'react-redux-form'
 import articleReducer from './reducers/article_reducer'
 import userReducer from './reducers/user_reducer'
 

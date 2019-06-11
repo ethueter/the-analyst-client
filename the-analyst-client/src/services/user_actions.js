@@ -17,12 +17,12 @@ export function newUser(info) {
         },
         body: JSON.stringify(info)
     }).then(res => res.json())
-    .then(user => {
-        if (user.id) {
-            let newU = {username: user.username, password: user.password}
-            login(newU).then(res => res.json())
-        } else {
-            return user.errors.full_messages
-        }
-    })
+    // .then(user => {
+    //     if (user.id) {
+    //         let newU = {username: user.username, password: user.password}
+    //         login(newU).then(res => res.json())
+    //     } else {
+    //         return user.errors.full_messages
+    //     }
+    // })
 }
