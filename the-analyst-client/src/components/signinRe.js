@@ -1,5 +1,4 @@
 import React from 'react'
-import { connect } from 'react-redux'
 import { login } from '../services/user_actions'
 import { withRouter } from 'react-router-dom'
 import { Form, Input, Button } from 'semantic-ui-react'
@@ -22,7 +21,7 @@ class SignIn extends React.Component {
         e.preventDefault()
         login(this.state).then(session => {
             localStorage.setItem('token', session.token)
-            localStorage.setItem('current_user_id', session.id)    
+            localStorage.setItem('current_user_id', session.current_user_id.toString())    
             console.log(session)
         })
         this.props.history.push('/')

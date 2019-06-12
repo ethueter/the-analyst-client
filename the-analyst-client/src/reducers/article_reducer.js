@@ -1,20 +1,34 @@
 import _ from 'lodash'
 
-export default (state = {headlines: [], selected: [], results: []}, action) => {
+export default (state = {headlines: [], selected: {}, results: [], reveal: {}}, action) => {
     switch (action.type) {
         case "FETCH_HEADLINES": {
             let convertedData = action.articles.map(article => createNewArticle(article))
-            // console.log(convertedData)
+            console.log('test 2',convertedData)
             let deDup = _.uniqBy(convertedData, 'title')
             return {...state, headlines: deDup}
             
         }
+        
         case "SEARCH_RESULTS": {
             return {state}
         }
+
         case "SELECT_ARTICLE": {
-            return {state}
+            return {...state, selected: action.article}
+        }                
+
+        case "RETURN_TO_LIST": {
+            return {...state, 
+                selected: {},
+                reveal: {}
+            }
         }
+
+        case "SOURCE_REVEAL": {
+            return {...state, reveal: action.source}
+        }
+        
         default: return state;
     }
 }
@@ -48,9 +62,10 @@ function sanitizeTitle(title) {
     let newText12 = _.replace(newText11, 'The Economist', ' ')
     let newText13 = _.replace(newText12, 'CNNPolitics', ' ')
     let newText14 = _.replace(newText13, ' - ', ' ')
+    let newText15 = _.replace(newText14, 'Politics', ' ')
     
     
-    return _.trimEnd(newText14)
+    return _.trimEnd(newText15)
 }
 
 function sanitizeText(title) {
@@ -68,8 +83,9 @@ function sanitizeText(title) {
     let newText11 = _.replace(newText10, '(PROPUBLICA)', ' ')
     let newText12 = _.replace(newText11, '(The Economist)', ' ')
     let newText13 = _.replace(newText12, '(CNNPolitics)', ' ')
+    let newText14 = _.replace(newText13, 'CNN', ' ')
 
 
-    return newText13
+    return newText14
 }
 
