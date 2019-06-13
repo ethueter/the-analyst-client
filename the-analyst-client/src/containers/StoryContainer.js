@@ -8,11 +8,14 @@ class StoryContainer extends React.Component {
     render() {
         return(
             <div>
-            { this.props.selected.id ?
-                <FullStory /> :
+                {this.props.selected.id ? 
+                    <FullStory /> : 
                     <ul style={{ overflow: 'auto', maxHeight: 500 }}>
-                    {this.props.articles.map(article => <Article {...article} />)}
-                </ul>
+                    {this.props.results.length>1 ?
+                    this.props.results.map(article => <Article {...article} />):
+                    this.props.articles.map(article => <Article {...article} />)
+                    }
+                    </ul>
             }
             </div>
         )
@@ -25,9 +28,11 @@ class StoryContainer extends React.Component {
 
 let mapStateToProps = (state) => {
     let articles = state.article.headlines
+    let results = state.article.results
     let selected = state.article.selected
     return {
         articles: articles,
+        results: results,
         selected: selected
     }
 }

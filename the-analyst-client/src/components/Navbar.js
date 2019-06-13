@@ -9,6 +9,11 @@ class Navbar extends React.Component {
 
     handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
+    handleLogout = (e) => {
+        localStorage.removeItem('token')
+        this.setState({ activeItem: {} })
+    }
+    
     render() {
         const { activeItem } = this.state
 
@@ -18,10 +23,10 @@ class Navbar extends React.Component {
                     localStorage.getItem('token') ?
                         <Menu.Item
                             as={Link}
-                            to='/'
+                            to='/login'
                             name='login'
                             active={activeItem === 'login'}
-                            onClick={() => localStorage.removeItem('token')}>
+                            onClick={this.handleLogout}>
                             Logout
                         </Menu.Item> :
                         <Menu.Item

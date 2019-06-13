@@ -1,7 +1,8 @@
 import React from 'react'
-import { Search, Segment } from 'semantic-ui-react'
+import { Input, Segment, List, Button } from 'semantic-ui-react'
 import _ from 'lodash'
 import { connect } from 'react-redux'
+import { getArticles } from '../services/article_actions'
 
 class SearchTerm extends React.Component {
     constructor() {
@@ -12,22 +13,40 @@ class SearchTerm extends React.Component {
     }
 
     handleSearch = (e) => {
+        e.preventDefault()
         this.setState({
             term: e.target.value
         })
-        this.filterArticles()
+    }
+
+    handleQuick = (e, { value }) => {
+        getArticles(value).then(this.props.showArticles)
+        
+    }
+
+    sendSearch(term) {
+        getArticles(term).then(this.props.showArticles)
     }
 
     render() {
+        console.log('quick', this.state.term)
         return(
             <div>
-                <Search
-                    onSearchChange={_.debounce(this.handleSearch, 2000, {
-                        leading: true,
-                    })}
+                <Input 
+                    onChange={this.handleSearch}
                 />
+                <Button onClick={()=>this.sendSearch(this.state.term)}>Search</Button>
                 <Segment>
                     <h3>Quick Search Links:</h3>
+                    <List link>
+                        <List.Item as='a' value='Trump' onClick={this.handleQuick}>Trump</List.Item>
+                        <List.Item as='a' value='Republican' onClick={this.handleQuick}>Republican</List.Item>
+                        <List.Item as='a' value='Democrat' onClick={this.handleQuick}>Democrat</List.Item>
+                        <List.Item as='a' value='Election' onClick={this.handleQuick}>Election</List.Item>
+                        <List.Item as='a' value='2020' onClick={this.handleQuick}>2020</List.Item>
+                        <List.Item as='a' value='Congress' onClick={this.handleQuick}>Congress</List.Item>
+                        <List.Item as='a' value='Senate' onClick={this.handleQuick}>Senate</List.Item>
+                    </List>
                 </Segment>
             </div>
         )
@@ -36,4 +55,13 @@ class SearchTerm extends React.Component {
 
 }
 
-export default connect()(SearchTerm)
+let mapDispatchToProps = dispatch => {
+    return {
+        showArticles: (articles) => {
+            let nonDupList = _.uniqBy(articles.posts, 'title')
+            dispatch({ type: 'SEARCH', articles: nonDupList })
+        }
+    }
+}
+
+export default connect(null, mapDispatchToProps)(SearchTerm)

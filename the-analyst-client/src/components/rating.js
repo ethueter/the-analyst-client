@@ -33,7 +33,7 @@ class ArticleRating extends React.Component {
             visable: true
         }
 
-        submitRating(newRecord).then(result => this.props.dispatch({ type: 'REVEAL_SOURCE', record: result, source: source }))
+        submitRating(newRecord).then(result => this.props.dispatch({ type: 'REVEAL_SOURCE', record: result, source: source[0] }))
     }
 
     render() {

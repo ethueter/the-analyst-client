@@ -10,8 +10,11 @@ export default (state = {headlines: [], selected: {}, results: [], reveal: {}}, 
             
         }
         
-        case "SEARCH_RESULTS": {
-            return {state}
+        case "SEARCH": {
+            let convertedData = action.articles.map(article => createNewArticle(article))
+            console.log('search', convertedData)
+            let deDup = _.uniqBy(convertedData, 'title')
+            return { ...state, results: deDup }
         }
 
         case "SELECT_ARTICLE": {
@@ -21,11 +24,12 @@ export default (state = {headlines: [], selected: {}, results: [], reveal: {}}, 
         case "RETURN_TO_LIST": {
             return {...state, 
                 selected: {},
-                reveal: {}
+                reveal: {},
+                results: []
             }
         }
 
-        case "SOURCE_REVEAL": {
+        case "REVEAL_SOURCE": {
             return {...state, reveal: action.source}
         }
         
