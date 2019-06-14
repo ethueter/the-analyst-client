@@ -7,7 +7,6 @@ import { getSource} from '../services/source_actions'
 class ArticleRating extends React.Component {
     constructor() {
         super()
-            this.handleSubmit = this.handleSubmit.bind(this);
         this.state = {
             rating: 0,
             favorite: 'false',

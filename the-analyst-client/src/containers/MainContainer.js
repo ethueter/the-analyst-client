@@ -28,6 +28,7 @@ class MainContainer extends React.Component {
                         <StoryContainer />
                     </Container>
                 </Grid.Column>
+                
             </Grid>
         )
     }

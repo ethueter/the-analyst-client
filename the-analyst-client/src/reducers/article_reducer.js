@@ -1,6 +1,6 @@
 import _ from 'lodash'
 
-export default (state = {headlines: [], selected: {}, results: [], reveal: {}}, action) => {
+export default (state = {headlines: [], selected: {}, results: [], reveal: {}, myArticle: {}}, action) => {
     switch (action.type) {
         case "FETCH_HEADLINES": {
             let convertedData = action.articles.map(article => createNewArticle(article))
@@ -25,12 +25,21 @@ export default (state = {headlines: [], selected: {}, results: [], reveal: {}}, 
             return {...state, 
                 selected: {},
                 reveal: {},
-                results: []
+                results: [],
+                myArticle: {}
             }
         }
 
         case "REVEAL_SOURCE": {
             return {...state, reveal: action.source}
+        }
+
+        case "MY_ARTICLE": {
+            return {...state,
+                reveal: {},
+                myArticle: action.article,
+                selected: action.article
+            }
         }
         
         default: return state;

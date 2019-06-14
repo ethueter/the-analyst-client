@@ -7,6 +7,7 @@ import { Switch, Route } from 'react-router-dom'
 import { Header } from 'semantic-ui-react'
 import MainContainer from './containers/MainContainer';
 import SourceContainer from './containers/SourceContainer'
+import ProfileContainer from './containers/ProfileContainer'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route exact path='/login' component={Login} />
         <Route exact path='/about' component={about} />
         <Route exact path='/sources' component={SourceContainer} />
+        <Route exact path='/profile' component={ProfileContainer} />
         <Route path='/' component={MainContainer} />
       </Switch>
     </div>
