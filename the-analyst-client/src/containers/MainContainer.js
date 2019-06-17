@@ -7,11 +7,13 @@ import { Container, Grid } from 'semantic-ui-react'
 import { getSources } from '../services/source_actions';
 import SearchTerm from '../components/search'
 
+
 class MainContainer extends React.Component {
 
     componentDidMount() {
         // getArticles().then(this.props.showArticles)
         getSources().then(this.props.sources)
+
     }
 
     render() {
@@ -24,7 +26,7 @@ class MainContainer extends React.Component {
                     </Container>
                 </Grid.Column>
                 <Grid.Column width={12}>
-                    <Container fluid textAlign='left' scrolling>
+                    <Container fluid textAlign='left' scrolling='true'>
                         <StoryContainer />
                     </Container>
                 </Grid.Column>
@@ -42,7 +44,9 @@ let mapDispatchToProps = (dispatch) => {
             let nonDupList = _.uniqBy(articles.posts, 'title')
             dispatch({ type: 'FETCH_HEADLINES', articles: nonDupList})
         },
-        sources: (sources) => {dispatch({ type: 'FETCH_SOURCES', sources: sources})}
+        sources: (sources) => {dispatch({ type: 'FETCH_SOURCES', sources: sources})},
+        userDetails: (info) => dispatch({ type: 'LOAD_USER_DATA', info: info })
+
     }
 }
 

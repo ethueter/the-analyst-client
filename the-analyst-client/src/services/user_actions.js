@@ -71,8 +71,8 @@ export function frequentSource(list, sources) {
         m = 0;
     }
     let source = sources.find(source => source.id == item)
+
     return source
 
-    console.log(source)
 
 }

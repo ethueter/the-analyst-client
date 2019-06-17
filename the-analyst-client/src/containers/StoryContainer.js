@@ -10,12 +10,15 @@ class StoryContainer extends React.Component {
             <div>
                 {this.props.selected.id ? 
                     <FullStory /> : 
-                    <ul style={{ overflow: 'auto', maxHeight: 500 }}>
-                    {this.props.results.length>1 ?
-                    this.props.results.map(article => <Article {...article} />):
-                    this.props.articles.map(article => <Article {...article} />)
-                    }
-                    </ul>
+                    <div>
+                        <h3>Top 100 Political Articles</h3>
+                        <ul style={{ overflow: 'auto', maxHeight: 500 }}>
+                        {this.props.results.length>1 ?
+                        this.props.results.map(article => <Article {...article} />):
+                        this.props.articles.map(article => <Article {...article} />)
+                        }
+                        </ul>
+                    </div>
             }
             </div>
         )

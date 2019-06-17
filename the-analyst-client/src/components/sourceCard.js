@@ -1,33 +1,39 @@
 import React from 'react'
-import { Card, Button, Image, CardHeader, CardDescription, CardMeta } from 'semantic-ui-react'
+import { connect } from 'react-redux'
+import { Card, Button, Image, CardHeader, CardDescription, CardMeta, Statistic } from 'semantic-ui-react'
 import _ from 'lodash'
+import SourceStatModal from './sourceStats'
 
-const SourceCard = (props) => {
 
 
+class SourceCard extends React.Component {
+    
+
+    
+    render() {
     return (
         <Card>
+            
             <Card.Content>
-                <Image floated='right' size='small' src={props.image_url} />
-                <CardHeader>{props.name}</CardHeader>
-                <CardMeta>{_.truncate(props.tagline, {'length': 50})}</CardMeta>
-                <CardDescription>{_.truncate(props.description, { 'length': 140 })}</CardDescription>
+                <Image floated='right' size='small' src={this.props.image_url} />
+                <CardHeader>{this.props.name}</CardHeader>
+                <CardMeta>{_.truncate(this.props.tagline, { 'length': 50 })}</CardMeta>
+                <CardDescription>{_.truncate(this.props.description, { 'length': 140 })}</CardDescription>
             </Card.Content>
             <Card.Content extra>
-                <div className='ui two buttons'>
-                    <Button basic color='green'>
-                        Stats
-                    </Button>
-                    <Button 
-                        as='a' 
-                        href={props.source_url} 
-                        basic color='red'>
-                        Visit Site
-                    </Button>
-                </div>
+                <SourceStatModal basic color='green' source={this.props}/>
+                   
             </Card.Content>
+               
+            
         </Card>
     )
-}
+    }
+} 
 
-export default SourceCard
+
+
+
+
+
+export default connect() (SourceCard)

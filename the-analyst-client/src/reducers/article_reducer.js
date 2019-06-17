@@ -4,7 +4,6 @@ export default (state = {headlines: [], selected: {}, results: [], reveal: {}, m
     switch (action.type) {
         case "FETCH_HEADLINES": {
             let convertedData = action.articles.map(article => createNewArticle(article))
-            console.log('test 2',convertedData)
             let deDup = _.uniqBy(convertedData, 'title')
             return {...state, headlines: deDup}
             

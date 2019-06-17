@@ -11,7 +11,6 @@ export function getArticles(term = 'trump') {
 
 export function commitArticle(article) {
     if (localStorage.getItem('token')) {
-        console.log('article', article)
         return fetch('http://localhost:3000/api/articles',{
             method: 'POST',
             headers: {

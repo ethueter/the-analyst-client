@@ -11,7 +11,7 @@ import ProfileContainer from './containers/ProfileContainer'
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" >
       <div>
         <Header size='large'>
           <h1>The Analyst</h1>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Segment, Header, Grid, GridColumn, Statistic, Button, StatisticLabel, StatisticValue } from 'semantic-ui-react';
+import { Segment, Header, Grid, GridColumn, Statistic, Button } from 'semantic-ui-react';
 import { connect } from 'react-redux'
 import {getUserData } from '../services/user_actions'
 import UserArticle from '../components/userArticles'
