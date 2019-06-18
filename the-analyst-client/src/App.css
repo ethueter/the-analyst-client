@@ -11,14 +11,14 @@
 
 .App-header {
   /* background-color: #282c34; */
-  min-height: 10vh;
+  min-height: 23vh;
   display: flex;
   flex-direction: column;
   align-items: left;
   justify-content: left;
   font-size: calc(10px + 2vmin);
   font: white;
-  background-image:  url(./images/newspapers-3488861_1920.jpg);
+  background-image:  url(./images/newspapers-3488861_1924.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -37,9 +37,4 @@
   }
 }
 
-.Logo {
-  background-image: url(./images/logo2.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: left;
-}
+

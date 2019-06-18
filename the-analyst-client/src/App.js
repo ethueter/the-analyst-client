@@ -13,10 +13,8 @@ function App() {
   return (
     <div className="App" >
       <div>
-        <Header inverted  textAlign='left' className='App-header' size='large' >
-          <h1>The Analyst</h1>
-          <h3>How do you rate the news....</h3>
-          <h3>when you don't know where it is coming from?</h3> 
+        <Header inverted  textAlign='left' className='App-header' >
+          
         </Header>
 
       </div>

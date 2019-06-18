@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Form, Radio, } from 'semantic-ui-react'
+import { Form, Radio, Button } from 'semantic-ui-react'
 import { submitRating } from '../services/rating_actions'
 import { getSource} from '../services/source_actions'
 
@@ -88,6 +88,7 @@ class ArticleRating extends React.Component {
                             onChange={this.handleFavorite}
                         />
                         <Form.Button>Rate It!</Form.Button>
+                        <Button onClick={()=>this.props.dispatch({ type: 'RETURN_TO_LIST'})}>Return to List</Button>
                 </Form.Group>
             </Form>
             </div>
