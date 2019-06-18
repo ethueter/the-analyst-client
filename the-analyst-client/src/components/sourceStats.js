@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Button, Header, Image, Modal, Statistic } from 'semantic-ui-react'
+import { Button, Image, Modal, Statistic } from 'semantic-ui-react'
 import { getStats, sourceRating } from '../services/source_actions'
 
 class SourceStatModal extends React.Component {

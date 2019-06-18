@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Card, Button, Image, CardHeader, CardDescription, CardMeta, Statistic } from 'semantic-ui-react'
+import { Card, Image, CardHeader, CardDescription, CardMeta } from 'semantic-ui-react'
 import _ from 'lodash'
 import SourceStatModal from './sourceStats'
 

@@ -6,7 +6,7 @@ import _ from 'lodash'
 import { Container, Grid } from 'semantic-ui-react'
 import { getSources } from '../services/source_actions';
 import SearchTerm from '../components/search'
-
+import NewsTicker from '../components/ticker'
 
 class MainContainer extends React.Component {
 
@@ -18,7 +18,8 @@ class MainContainer extends React.Component {
 
     render() {
         return(
-            
+            <div>
+            <NewsTicker />
             <Grid divided>
                 <Grid.Column width={4}>
                     <Container >
@@ -32,6 +33,7 @@ class MainContainer extends React.Component {
                 </Grid.Column>
                 
             </Grid>
+            </div>
         )
     }
 

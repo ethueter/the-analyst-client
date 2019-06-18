@@ -5,6 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(./images/bank-phrom-352283-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   
 }
 
@@ -14,7 +18,7 @@ code {
 }
 
 root {
-  background-image: url(./images/bank-phrom-352283-unsplash.jpg);
+  background-image: url(./images/logo2.png), url(./images/bank-phrom-352283-unsplash.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

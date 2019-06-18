@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -9,14 +10,18 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  /* background-color: #282c34; */
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
   font-size: calc(10px + 2vmin);
-  color: white;
+  font: white;
+  background-image:  url(./images/newspapers-3488861_1920.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .App-link {
@@ -30,4 +35,11 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.Logo {
+  background-image: url(./images/logo2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
 }
