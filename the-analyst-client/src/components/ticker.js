@@ -16,7 +16,7 @@ const NewsTicker = (props) => {
        <Ticker
        offset="50%">
            {({index}) => (
-               <h1>{articles[rand(0, articles.length - 1)]}</h1>
+               <h1>{articles[rand(0, articles.length - 1)]}&emsp;</h1>
            )}
        </Ticker>
    )

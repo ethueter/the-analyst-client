@@ -34,31 +34,33 @@ class Profile extends React.Component {
     }
 
     render() {
-        
         return (
             <div>
-            <Segment>
-                <Header size="large">Welcome: {this.props.user.username}</Header>
-            </Segment>
-            <Grid divided>
-                <GridColumn width='6'>
-                    <h3>Profile</h3>
-                    <Statistic value={this.props.articles.length} label="Articles Read" />
-                    <Statistic value={this.props.faves.length} label="Total Favorites" />
-                    <Segment>
-                        <h4>Personal Preferance:</h4>
-                            <Statistic size='large' value={() => userLean(this.props.avg)}/>
-                                
-                            <h4 >Favorite Source:</h4>
-                            <Button onClick={this.handleReveal}>See Your Favorite Source</Button>
-                            { this.state.reveal ?
-                                <ProfileSourceCard faves={this.props.faves} sources={this.props.sources} /> :
-                                null
+            { 
+            this.props.user ?
+            <div>
+                <Segment>
+                    <Header size="large">Welcome: {this.props.user.username}</Header>
+                </Segment>
+                <Grid divided>
+                    <GridColumn width='6'>
+                        <h3>Profile</h3>
+                        <Statistic value={this.props.articles.length} label="Articles Read" />
+                        <Statistic value={this.props.faves.length} label="Total Favorites" />
+                        <Segment>
+                            <h4>Personal Preferance:</h4>
+                                <Statistic size='large' value={() => userLean(this.props.avg)}/>
+                                    
+                                <h4 >Favorite Source:</h4>
+                                <Button onClick={this.handleReveal}>See Your Favorite Source</Button>
+                                { this.state.reveal ?
+                                    <ProfileSourceCard faves={this.props.faves} sources={this.props.sources} /> :
+                                    null
 
-                            }
-                    </Segment>
-                </GridColumn>
-                <GridColumn width='10' textAlign='justified'>
+                                }
+                        </Segment>
+                    </GridColumn>
+                    <GridColumn width='10' textAlign='justified'>
                         <div className='ui two buttons'>
                             <Button basic color='green' onClick={this.handleClick}>
                                 All Articles
@@ -67,24 +69,30 @@ class Profile extends React.Component {
                                 Favorites
                             </Button>
                         </div>
-                {
-                    this.props.myArticle.id ?
-                    <FullStory /> :
-                    <div>
-                        {this.state.showFaves ?
-                            <div>
-                                <h3>Your Favorites</h3>
-                                {this.props.faves.map(article => <UserArticle {...article} />)}
-                            </div> :
-                            <div>
-                                <h3>Your Articles</h3>
-                                {this.props.articles.map(article => <UserArticle {...article}/>)}
-                            </div>
-                        }
-                    </div>
+                    {
+                        this.props.myArticle.id ?
+                        <FullStory /> :
+                        <div>
+                            {this.state.showFaves ?
+                                <div>
+                                    <h3>Your Favorites</h3>
+                                    {this.props.faves.map(article => <UserArticle {...article} />)}
+                                </div> :
+                                <div>
+                                    <h3>Your Articles</h3>
+                                    {this.props.articles.map(article => <UserArticle {...article}/>)}
+                                </div>
+                            }
+                        </div>
                     }
-                </GridColumn>
-            </Grid>
+                    </GridColumn>
+                </Grid>
+            </div> :
+            <Segment>
+                    <h1>Please Login First</h1>
+            </Segment>
+
+            }
             </div>
         )
     }

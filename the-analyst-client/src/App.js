@@ -4,7 +4,7 @@ import Navbar from './components/Navbar'
 import Login from './components/login'
 import about from './components/about'
 import { Switch, Route } from 'react-router-dom'
-import { Header, Image } from 'semantic-ui-react'
+import { Header } from 'semantic-ui-react'
 import MainContainer from './containers/MainContainer';
 import SourceContainer from './containers/SourceContainer'
 import ProfileContainer from './containers/ProfileContainer'
