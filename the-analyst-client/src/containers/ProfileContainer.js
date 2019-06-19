@@ -76,12 +76,16 @@ class Profile extends React.Component {
                             {this.state.showFaves ?
                                 <div>
                                     <h3>Your Favorites</h3>
+                                    <ul style={{ overflow: 'auto', maxHeight: 500 }}>
                                     {this.props.faves.map(article => <UserArticle {...article} />)}
+                                    </ul>
                                 </div> :
                                 <div>
                                     <h3>Your Articles</h3>
+                                    <ul style={{ overflow: 'auto', maxHeight: 500 }}>
                                     {this.props.articles.map(article => <UserArticle {...article}/>)}
-                                </div>
+                                    </ul>
+                             </div>
                             }
                         </div>
                     }

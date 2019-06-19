@@ -8,6 +8,7 @@ import { Header } from 'semantic-ui-react'
 import MainContainer from './containers/MainContainer';
 import SourceContainer from './containers/SourceContainer'
 import ProfileContainer from './containers/ProfileContainer'
+import RateEx from './components/rate'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route exact path='/about' component={about} />
         <Route exact path='/sources' component={SourceContainer} />
         <Route exact path='/profile' component={ProfileContainer} />
+        <Route exact path='/rate' component={RateEx} />
         <Route path='/' component={MainContainer} />
       </Switch>
     </div>

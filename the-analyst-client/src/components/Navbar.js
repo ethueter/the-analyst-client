@@ -18,7 +18,7 @@ class Navbar extends React.Component {
         const { activeItem } = this.state
 
         return (
-            <Menu>
+            <Menu widths='6'>
                 {
                     localStorage.getItem('token') ?
                         <Menu.Item
@@ -75,23 +75,17 @@ class Navbar extends React.Component {
                     onClick={this.handleItemClick}>
                     About
                 </Menu.Item>
-                 {/* {
-                     this.props.username.length >1 ? 
+
                 <Menu.Item
                     as={Link}
-                    to='/profile'
-                    name='user'
-                    position='right'>
-                    {this.props.username}
-                </Menu.Item>:
-                <Menu.Item
-                    as={Link}
-                    to='/login'
-                    name='user'
-                    position='right'>
-                    Username
+                    to='/rate'
+                    name='rate'
+                    active={activeItem === 'rate'}
+                    fixed='right'
+                    onClick={this.handleItemClick}>
+                    How to Rate
                 </Menu.Item>
-                 } */}
+                
             </Menu>
         )
     }
