@@ -11,7 +11,7 @@ import NewsTicker from '../components/ticker'
 class MainContainer extends React.Component {
 
     componentDidMount() {
-        // getArticles().then(this.props.showArticles)
+        getArticles().then(this.props.showArticles)
         getSources().then(this.props.sources)
 
     }

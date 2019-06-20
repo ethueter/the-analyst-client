@@ -21,7 +21,7 @@ export function newUser(info) {
 
 export function getUserData(id) {
     if (localStorage.getItem('token'))
-    return fetch(`http://localhost:3000/api/users/${id}`, {
+        return fetch(`http://localhost:3000/api/users/${id}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',

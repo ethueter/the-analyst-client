@@ -5,54 +5,27 @@ const about =()=> {
 
     return(
         <div>
-            <Container>
-            <h2> About This Site</h2>
-            <p>This site is the final project for Tyler Hueter as he completes the 15 week Web Immersive bootcamp.
-                The purpose of this site would be to guide individuals to read news stories from sources they would not normally go to.
-                Through that people can help determine their own personal preferences/bias and to crowdsource a bias reading for different news sources.
+            <Container textAlign='justified'>
+            <h2> Concept</h2>
+            <p>As Americans we live in one of the most polarizing times in our nation's history. Politics and political beliefs are the drivers of this change in our society.
+                One of the main questions of our time is how are are we informed? Is the information we are basing our decisions and beliefs on reliable and trustworthy? In short...Fake News.
+                This site does not attempt to claim the abiltiy or resources to verify all the claims made or fact presented in the news today. Instead, it attempts to address another issue that has stemmed from this national division.
             </p>
-            <h2>About this Project </h2>
-            <p>This project was an exercise in full stack development. It was concieved and developed over a 3 week period in June 2019. The following technologies were used in the creation of this site:</p>
-            <Grid columns={3} divided>
-                <GridRow>
-                    <GridColumn>
-                        <h3>Back-End</h3>
-                            <ul>
-                                <li>Ruby</li>
-                                <li>Ruby on Rails</li>
-                                <li>Postgresql</li>
-                            </ul>
-                    </GridColumn>
-                    <GridColumn>
-                        <h3>Front-End</h3>
-                            <ul>
-                                <li>React</li>
-                                <li>Redux</li>
-                                <li>Javascript</li>
-                                
-                            </ul>
-                    </GridColumn>
-                    <GridColumn>
-                            <h3>Gems/Libraries</h3>
-                            <ul>
-                                <li>Bcrypt & JWT</li>
-                                <li>lodash</li>
-                                <li>React-Router</li>
-                                <li>React-Ticker</li>
-                                <li>Semantic UI React</li>
-                            </ul>
-                        
-                    </GridColumn>
-                </GridRow>               
-            </Grid>
-                <p>News content provided by <a href="www.webhose.io">webhose.io</a></p>
-                <p>Image by <a href="https://pixabay.com/users/congerdesign-509903/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3488861">congerdesign</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3488861">Pixabay</a></p>
-            <h2>About the Developer</h2>
-            <p>Tyler Hueter has worked in several and varied industries, including non profit performing arts, politics, and most recently transportation.
-                As the managing partner in a taxi company in Charleston, he whitnessed first hand the disruptive and transforative abilities of technology.
-                And as small businesses in the transportation industry are closing rapidly, he chose to be on the forefront of change before becoming a victim of it.
-                Hope you enjoy the project!
+            <p>
+                Where Americans get their news is increasingly defined by which camp they have chosen. If they have sided with the left or liberal side, people tend to turn to CNN, Mother Jones or HuffPost for their news. Conversely, 
+                those siding on the right or conservatively rely on Fox News, the Blaze, or the National Review. Increasingly people will not cross the lines and seek information from sources linked (truthfully, or just in opinion) to the other side.
+                Tuning out the other side and just assuming they are wrong or their news is fake will only cause more harm and division. This site attemps to shed some light on this.
             </p>
+
+            <h2>How this site works</h2>
+            <p>
+                The goal of this site is to get people to read news articles from all sides. To accomplish this the site provides between 75 and 100 of the most recent political (or whatever the user has searched for) stories and MASKS their source.
+                Readers then have the ability to rate each article with what bias they believe the article has. They also have the ability to tag articles as favorites. Only once a user has submitted a rating will they be able to see they source of the article.
+                The data collected from those submission is then compiled to provide a bias rating for the news source as well as the individual reader.
+            </p>
+            <p>So the question is...</p>
+            <h3>How do you rate the news...when you don't know where it is coming from?</h3>
+            
             </Container>
         </div>
     )

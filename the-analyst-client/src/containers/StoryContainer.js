@@ -2,6 +2,7 @@ import React from 'react'
 import Article from '../components/article'
 import { connect } from 'react-redux'
 import FullStory from '../components/fullstory'
+import '../style.css'
 
 class StoryContainer extends React.Component {
 
@@ -10,7 +11,7 @@ class StoryContainer extends React.Component {
             <div>
                 {this.props.selected.id ? 
                     <FullStory /> : 
-                    <div>
+                    <div className='pointer'>
                         <h3>Top 100 Political Articles</h3>
                         <ul style={{ overflow: 'auto', maxHeight: 500 }}>
                         {this.props.results.length>1 ?

@@ -69,21 +69,21 @@ class Navbar extends React.Component {
 
                 <Menu.Item
                     as={Link}
-                    to='/about'
-                    name='about'
+                    to='/concept'
+                    name='concept'
                     active={activeItem === 'about'}
                     onClick={this.handleItemClick}>
-                    About
+                    Concept
                 </Menu.Item>
 
                 <Menu.Item
                     as={Link}
-                    to='/rate'
-                    name='rate'
+                    to='/project'
+                    name='project'
                     active={activeItem === 'rate'}
                     fixed='right'
                     onClick={this.handleItemClick}>
-                    How to Rate
+                    Project
                 </Menu.Item>
                 
             </Menu>

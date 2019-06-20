@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { commitArticle } from '../services/article_actions';
-
+import '../style.css'
 
 class Article extends React.Component {
 
@@ -21,7 +21,7 @@ class Article extends React.Component {
 
     render() {
         return(
-            <li onClick={()=>this.putItTogether()}>
+            <li className='pointer' onClick={()=>this.putItTogether()}>
                 {this.props.title}
             </li>
         )

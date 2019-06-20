@@ -16,7 +16,7 @@ class Login extends React.Component {
     render() {
     return(
         <div className='login'>
-            <Card centered='true'>
+            <Card centered>
                 <Card.Content header='Login' />
                 <Card.Content>
                     { this.state.newUser ?

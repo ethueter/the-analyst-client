@@ -6,6 +6,7 @@ import UserArticle from '../components/userArticles'
 import FullStory from '../components/fullstory';
 import { userLean } from '../services/user_actions'
 import ProfileSourceCard from '../components/profileSourceCard';
+import { Link } from 'react-router-dom'
 
 class Profile extends React.Component {
     constructor() {
@@ -49,7 +50,7 @@ class Profile extends React.Component {
                         <Statistic value={this.props.faves.length} label="Total Favorites" />
                         <Segment>
                             <h4>Personal Preferance:</h4>
-                                <Statistic size='large' value={() => userLean(this.props.avg)}/>
+                                <Statistic size='large' color='green' value={() => userLean(this.props.avg)}/>
                                     
                                 <h4 >Favorite Source:</h4>
                                 <Button onClick={this.handleReveal}>See Your Favorite Source</Button>
@@ -93,7 +94,19 @@ class Profile extends React.Component {
                 </Grid>
             </div> :
             <Segment>
-                    <h1>Please Login First</h1>
+                <Grid columns='2'>
+                    <GridColumn>
+                        <h1>Not Logged In?</h1>
+                        <Button as={Link} to='/login' name='login'>Login</Button>
+                    </GridColumn>
+                    <GridColumn>
+                        <h1>Logged in and still here?</h1>
+                        <p>Please click on articles on the home page and rate them. Without ratings there are no stats to show you!</p>
+                        <Button as={Link} to='/' name='home'>Home</Button>
+                    </GridColumn>
+
+                </Grid>
+                    
             </Segment>
 
             }

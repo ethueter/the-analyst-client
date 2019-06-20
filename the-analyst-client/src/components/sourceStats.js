@@ -17,7 +17,7 @@ class SourceStatModal extends React.Component {
         <Modal.Content image>
             <Image wrapped size='medium' src={this.props.source.image_url} />
             <Modal.Description>
-                <Statistic label='Articles Read' value={this.props.num_articles} />
+                <Statistic label='Articles Read By All Members' value={this.props.num_articles} />
                 <h3>Bias Rating</h3>
                 <h2>{sourceRating(this.props.rating)}</h2>
             </Modal.Description>

@@ -16,7 +16,7 @@ const ProfileSourceCard = (props) => {
                 <CardDescription>{_.truncate(source.description, { 'length': 140 })}</CardDescription>
             </Card.Content> :
             <Card.Content>
-                <p>No clear leader yet! Keep rating and favoriting articles and come back to see the leader.</p>
+                <p>No clear leader yet! Keep rating articles, mark your favorites, and come back come back to see the results.</p>
             </Card.Content>
             }
         </Card>

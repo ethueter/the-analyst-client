@@ -24,7 +24,7 @@ class SignUp extends React.Component {
             let newSess = {username: info.username, password: this.state.password}
             login(newSess).then(session => {
                 localStorage.setItem('token', session.token)
-                localStorage.setItem('current_user_id', session.id)
+                localStorage.setItem('current_user_id', session.current_user_id)
                 console.log(session)
             })
             this.props.history.push('/')

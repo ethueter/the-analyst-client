@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Segment, Card } from 'semantic-ui-react'
 import SourceCard from '../components/sourceCard'
+import { getSources } from '../services/source_actions'
 
 
 const SourceContainer = (props) => {
@@ -23,6 +24,9 @@ const SourceContainer = (props) => {
 let mapStateToProps = state => {
     let sourceList = state.source.sources
     return { sourceList: sourceList}
+    
 }
+
+
 
 export default connect(mapStateToProps)(SourceContainer)
