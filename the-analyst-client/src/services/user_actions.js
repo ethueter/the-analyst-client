@@ -1,5 +1,5 @@
 export function login(info) {
-    return fetch('http://localhost:3000/api/login', {
+    return fetch('https://aqueous-thicket-47637.herokuapp.com/api/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -10,7 +10,7 @@ export function login(info) {
 }
 
 export function newUser(info) {
-    return fetch('http://localhost:3000/api/users', {
+    return fetch('https://aqueous-thicket-47637.herokuapp.com/api/users', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -21,7 +21,7 @@ export function newUser(info) {
 
 export function getUserData(id) {
     if (localStorage.getItem('token'))
-        return fetch(`http://localhost:3000/api/users/${id}`, {
+        return fetch(`https://aqueous-thicket-47637.herokuapp.com/api/users/${id}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
