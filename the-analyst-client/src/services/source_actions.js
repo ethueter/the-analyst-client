@@ -11,7 +11,7 @@ export function getSource(article, sources) {
 }
 
 export function getStats(source_id) {
-    return fetch(`https://aqueous-thicket-47637.herokuapp.com/${source_id}`)
+    return fetch(`https://aqueous-thicket-47637.herokuapp.com/api/sources/${source_id}`)
     .then(res => res.json())
 }
 
