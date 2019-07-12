@@ -2,6 +2,10 @@
   "name": "the-analyst-client",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm": "6.9.0",
+    "node": "12.6.0"
+  },
   "dependencies": {
     "lodash": "^4.17.11",
     "react": "^16.8.6",
