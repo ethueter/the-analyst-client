@@ -1,5 +1,5 @@
 export function submitRating(record) {
-    return fetch('http://localhost:3000/api/user_articles', {
+    return fetch('https://aqueous-thicket-47637.herokuapp.com/api/user_articles', {
         method: 'POST',
         headers: {
             'Content-Type' : 'application/json',

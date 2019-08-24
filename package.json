@@ -2,6 +2,10 @@
   "name": "the-analyst-client",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm": "6.9.0",
+    "node": "12.6.0"
+  },
   "dependencies": {
     "lodash": "^4.17.11",
     "react": "^16.8.6",
@@ -13,7 +17,9 @@
     "react-ticker": "^1.1.2",
     "redux": "^4.0.1",
     "redux-form": "^8.2.3",
-    "semantic-ui-react": "^0.87.1"
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.87.2",
+    "serve": "^11.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
