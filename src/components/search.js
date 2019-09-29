@@ -46,7 +46,15 @@ class SearchTerm extends React.Component {
                         <List.Item as='a' value='2020' onClick={this.handleQuick}>2020</List.Item>
                         <List.Item as='a' value='Congress' onClick={this.handleQuick}>Congress</List.Item>
                         <List.Item as='a' value='Senate' onClick={this.handleQuick}>Senate</List.Item>
+                        <List.Item as='a' value='Impeachment' onClick={this.handleQuick}>Impeachment</List.Item>
+                        <List.Item as='a' value='Ukraine' onClick={this.handleQuick}>Ukraine</List.Item>
                     </List>
+                </Segment>
+                <Segment>
+                    <h3>Please Note:</h3>
+                    <p>As we are working to improve the site's ability to remove information about the source of an article, the system is not perfect. Some articles may contain references to their origin. 
+                        Please excuse the error and know we are working to improve it.
+                    </p>
                 </Segment>
             </div>
         )
