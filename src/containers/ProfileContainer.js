@@ -19,7 +19,7 @@ class Profile extends React.Component {
 
 
     componentDidMount() {
-        getUserData(localStorage.getItem('current_user_id')).then(this.props.userDetails)
+        getUserData(localStorage.getItem('current_user_id')).then(this.props.userDetails).catch((err) => console.log(err))
 
     }
 
