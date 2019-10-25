@@ -19,7 +19,12 @@ class Profile extends React.Component {
 
 
     componentDidMount() {
-        getUserData(localStorage.getItem('current_user_id')).then(this.props.userDetails)
+        getUserData(localStorage.getItem('current_user_id'))
+        .then(res => {if (res === null){
+            console.log('no user signed in')
+        }else {
+            this.props.userDetails
+        }})
 
     }
 
