@@ -27,7 +27,7 @@ export function getUserData(id) {
             'Content-Type': 'application/json',
             'Access-Token': localStorage.getItem('token')
         }
-    }).then(res => res.json())
+        }).then(res => res.json()).catch((err) => console.log('test', err))
 }
 
 export function userLean(avg) {
