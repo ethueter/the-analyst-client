@@ -13,18 +13,19 @@ class Profile extends React.Component {
         super()
         this.state = {
             showFaves: false,
-            reveal: false
+            reveal: false,
+            loggedIn: true
         }
     }
 
 
     componentDidMount() {
-        getUserData(localStorage.getItem('current_user_id'))
-        .then(res => {if (res === null){
-            console.log('no user signed in')
-        }else {
-            this.props.userDetails
-        }})
+        if (localStorage.getItem('token')){
+        getUserData(localStorage.getItem('current_user_id')).then(this.props.userDetails)
+        } else {
+            this.setState({loggedIn: false})
+        }
+        
 
     }
 
@@ -43,7 +44,7 @@ class Profile extends React.Component {
         return (
             <div>
             { 
-            this.props.user.username ?
+            this.state.loggedIn ?
             <div>
                 <Segment>
                     <Header size="large">Welcome: {this.props.user.username}</Header>
