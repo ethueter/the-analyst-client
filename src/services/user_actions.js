@@ -29,7 +29,8 @@ export function getUserData(id) {
         }
         }).then(res => res.json())
     } else {
-            return {status: 404, error: "You must be logged in"}
+            console.log('test')
+            return ({status: 404, error: "You must be logged in"})
         }
 }
 
