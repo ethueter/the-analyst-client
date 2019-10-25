@@ -38,7 +38,7 @@ class Profile extends React.Component {
         return (
             <div>
             { 
-            this.props.user ?
+            this.props.user.username ?
             <div>
                 <Segment>
                     <Header size="large">Welcome: {this.props.user.username}</Header>
