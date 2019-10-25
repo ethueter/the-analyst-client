@@ -20,14 +20,17 @@ export function newUser(info) {
 }
 
 export function getUserData(id) {
-    if (localStorage.getItem('token'))
+    if (localStorage.getItem('token')){
         return fetch(`https://aqueous-thicket-47637.herokuapp.com/api/users/${id}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
             'Access-Token': localStorage.getItem('token')
         }
-        }).then(res => res.json()).catch((err) => console.log('test', err))
+        }).then(res => res.json())
+    } else {
+            return {status: 404, error: "You must be logged in"}
+        }
 }
 
 export function userLean(avg) {
