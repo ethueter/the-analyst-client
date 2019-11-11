@@ -52,7 +52,7 @@ class SearchTerm extends React.Component {
                 </Segment>
                 <Segment>
                     <h3>Please Note:</h3>
-                    <p>As we are working to improve the site's ability to remove information about the source of an article, the system is not perfect. Some articles may contain references to their origin. 
+                    <p>We are working to improve the site's ability to remove information about the source of an article. Some articles may contain references to their origin. 
                         Please excuse the error and know we are working to improve it.
                     </p>
                 </Segment>
