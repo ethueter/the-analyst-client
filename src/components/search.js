@@ -39,7 +39,7 @@ class SearchTerm extends React.Component {
                 <Segment>
                     <h3>Quick Search Links:</h3>
                     <List link>
-                        <List.Item as='a' value='Trump' onClick={this.handleQuick}>Trump</List.Item>
+                        <List.Item as='a' value='Drumpf' onClick={this.handleQuick}>Drumpf</List.Item>
                         <List.Item as='a' value='Republican' onClick={this.handleQuick}>Republican</List.Item>
                         <List.Item as='a' value='Democrat' onClick={this.handleQuick}>Democrat</List.Item>
                         <List.Item as='a' value='Election' onClick={this.handleQuick}>Election</List.Item>
@@ -52,8 +52,7 @@ class SearchTerm extends React.Component {
                 </Segment>
                 <Segment>
                     <h3>Please Note:</h3>
-                    <p>We are working to improve the site's ability to remove information about the source of an article. Some articles may contain references to their origin. 
-                        Please excuse the error and know we are working to improve it.
+                    <p>The paid news api account has been suspended. No live articles will populate at this time.
                     </p>
                 </Segment>
             </div>
